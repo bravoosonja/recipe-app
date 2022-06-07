@@ -1,18 +1,22 @@
 # Overview
 The objective of this app is to display recipes by making an external API request using React.
 ## Demo
+[Live Demo]("/")
 
 ## Features
 - Carousal to display recipes
-- display popular recipes
+- Display popular recipes
+- Display recipes by category
+- Animation
 
 # Skills used
 - React
 - Styled Components 
-- Fetch API
+- API
 
 # Lessons learned
-- use of `.env` to hide the API key from Github
+- The use of `.env` to hide the API key from Github
+- Defining global styles on styled components
 
 # Acknowledgement
-(Recipe API)[https://spoonacular.com/food-api]
+[Recipe API](https://spoonacular.com/food-api)
