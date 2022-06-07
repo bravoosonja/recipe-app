@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Wrapper, Card, Gradient } from '../pages/HomeStyles';
+import { Wrapper, Card, Gradient } from '../styles/HomeStyles'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide';
 import '@splidejs/splide/css';
@@ -19,39 +19,39 @@ const Veggie = () => {
       setVeggie(JSON.parse(check));
     } else {
       const api = await fetch(` https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&tages=vegetarian`);
-    
       const data = await api.json();
       localStorage.setItem('veggie', JSON.stringify(data.recipes));
       setVeggie(data.recipes)
       console.log(data.recipes);
+  
     }
-  }
 
-  return (
-    <div>
+    return (
+      <div>
         <Wrapper>
           <h2>Our Vegetarian Picks 🥗</h2>
-        <Splide options={{
-          perPage: 4,
-          pagination: false,
-          drag: 'free',
-          gap: '4rem'
+          <Splide options={{
+            perPage: 4,
+            pagination: false,
+            drag: 'free',
+            gap: '4rem'
           }}>
-          {veggie.map((recipe) => {
-            return (
-              <SplideSlide key={recipe.id}>
-              <Card>
-                <p>{recipe.title}</p>
-                  <img src={recipe.image} alt="{recipe.title}" />
-                  <Gradient/>
-                </Card>
-              </SplideSlide>
-            )
-          })}
+            {veggie.map((recipe) => {
+              return (
+                <SplideSlide key={recipe.id}>
+                  <Card>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt="{recipe.title}" />
+                    <Gradient />
+                  </Card>
+                </SplideSlide>
+              )
+            })}
           </Splide>
         </Wrapper>
-    </div>
-  )
+      </div>
+    )
+  }
 }
 
 export default Veggie

@@ -1,14 +1,15 @@
 import Veggie from "../components/Veggie";
 import Popular from "../components/Popular";
-import HomeStyles from './HomeStyles';
 
 function Home() {
     return (
-    <div>
+      <div>
         <Veggie />
         <Popular />
     </div>
   )
+
+  
 }
 
 export default Home

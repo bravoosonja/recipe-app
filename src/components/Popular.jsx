@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { Wrapper, Card, Gradient } from '../pages/HomeStyles';
+import { Wrapper, Card, Gradient } from '../styles/HomeStyles'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide';
 import '@splidejs/splide/css';
 
 
-function Popular(){
+function Popular() {
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
@@ -20,41 +20,40 @@ function Popular(){
       setPopular(JSON.parse(check));
     } else {
       const api = await fetch(` https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10`);
-    
       const data = await api.json();
       localStorage.setItem('popular', JSON.stringify(data.recipes));
-      setPopular(data.recipes)
+      setPopular(data.recipes);
       console.log(data.recipes);
-    }
-  }
+    };
+  
 
 
-  return (
-    <div>
+    return (
+      <div>
         <Wrapper>
           <h2>Popular Recipes 🔥</h2>
-        <Splide options={{
-          perPage: 4,
-          pagination: false,
-          drag: 'free',
-          gap: '4rem'
+          <Splide options={{
+            perPage: 4,
+            pagination: false,
+            drag: 'free',
+            gap: '4rem'
           }}>
-          {popular.map((recipe) => {
-            return (
-              <SplideSlide key={recipe.id}>
-              <Card>
-                <p>{recipe.title}</p>
-                  <img src={recipe.image} alt="{recipe.title}" />
-                  <Gradient/>
-                </Card>
-              </SplideSlide>
-            )
-          })}
+            {popular.map((recipe) => {
+              return (
+                <SplideSlide key={recipe.id}>
+                  <Card>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt="{recipe.title}" />
+                    <Gradient />
+                  </Card>
+                </SplideSlide>
+              )
+            })}
           </Splide>
         </Wrapper>
-    </div>
-  )
-};
-
+      </div>
+    )
+  };
+}
 
 export default Popular
