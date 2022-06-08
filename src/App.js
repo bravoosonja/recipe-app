@@ -11,6 +11,9 @@ import Home from "./pages/Home";
 import Search from "./features/Search";
 import ToggleTheme from "./features/ToggleTheme";
 
+//hook
+import { persistTheme } from "./features/persistTheme";
+
 //react
 import { useState } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
@@ -20,14 +23,11 @@ import {
 } from "./features/GlobalContext";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    if (theme === "light") setTheme("dark");
-    else setTheme("light");
-  };
+  const [theme, setTheme] = persistTheme();
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
         <Router>

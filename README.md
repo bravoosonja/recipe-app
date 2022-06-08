@@ -22,6 +22,7 @@ The objective of this app is to display recipes by making an external API reques
 - Defining global styles on styled components
 - The use of `dangerouslySetInnerHTML` to render html
 - The use of theme provider on Styled Components to togglet light/dark mode
+- The use of `window.matchMedia` to retrieve the users' preferred color schemes in their OS
 
 
 # Acknowledgement
