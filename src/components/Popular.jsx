@@ -1,10 +1,11 @@
+//react
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+//styling components
 import { Wrapper, Card, Gradient } from '../styles/HomeStyles'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide';
 import '@splidejs/splide/css';
-import { Link } from 'react-router-dom';
-
 
 function Popular() {
   const [popular, setPopular] = useState([]);
@@ -26,8 +27,6 @@ function Popular() {
       setPopular(data.recipes);
       console.log(data.recipes);
     };
-  
-
 
     return (
       <div>
@@ -43,11 +42,11 @@ function Popular() {
               return (
                 <SplideSlide key={recipe.id}>
                   <Card>
-                    <Link to ={"/recipe/"+recipe.id}>
-                    <p>{recipe.title}</p>
-                    <img src={recipe.image} alt="{recipe.title}" />
+                    <Link to={"/recipe/" + recipe.id}>
+                      <p>{recipe.title}</p>
+                      <img src={recipe.image} alt="{recipe.title}" />
                       <Gradient />
-                      </Link>
+                    </Link>
                   </Card>
                 </SplideSlide>
               )

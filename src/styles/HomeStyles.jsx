@@ -46,7 +46,7 @@ text-decoration: none;
 font-size: 4rem;
 font-weight: 700;
 font-family: 'Montserrat', sans-serif;
-
+color: ${({ theme }) => theme.primaryColor};
 `;
 
 export const Nav = styled.div`
@@ -57,5 +57,4 @@ align-items: center;
 svg {
     font-size: 2rem;
 }
-
 `

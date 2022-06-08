@@ -1,8 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-export const primaryColor = "#0BCF87";
-export const secondaryColor = "#FFE2B6";
-
 const GlobalStyle = createGlobalStyle`
   *{
   margin: 0;
@@ -30,10 +27,12 @@ h1, h2, h3, h4 {
   text-align: center;
   justify-content: center;
   padding: 1rem;
+  color:${({ theme }) => theme.textColor};
 }
 
 p{
   font-family: 'Lato', sans-serif;
+  color:${({ theme }) => theme.textColor};
 }
 
 a{
@@ -56,6 +55,5 @@ export const darkTheme = {
   secondaryColor: "##F0E4BF",
 };
 
-export const ThemeContext = React.createContext(themes.light);
 
 export default GlobalStyle;

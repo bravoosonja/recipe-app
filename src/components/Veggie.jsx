@@ -1,9 +1,11 @@
+//react
 import { useEffect, useState } from "react";
-import { Wrapper, Card, Gradient } from '../styles/HomeStyles'
-import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Link } from 'react-router-dom';
+//styling components
 import '@splidejs/react-splide';
 import '@splidejs/splide/css';
+import { Wrapper, Card, Gradient } from '../styles/HomeStyles'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const Veggie = () => {
   const [veggie, setVeggie] = useState([]);
@@ -24,7 +26,7 @@ const Veggie = () => {
       localStorage.setItem('veggie', JSON.stringify(data.recipes));
       setVeggie(data.recipes)
       console.log(data.recipes);
-  
+
     }
 
     return (
@@ -41,11 +43,11 @@ const Veggie = () => {
               return (
                 <SplideSlide key={recipe.id}>
                   <Card>
-                    <Link to={"/recipe/"+recipe.id}>
-                    <p>{recipe.title}</p>
-                    <img src={recipe.image} alt="{recipe.title}" />
+                    <Link to={"/recipe/" + recipe.id}>
+                      <p>{recipe.title}</p>
+                      <img src={recipe.image} alt="{recipe.title}" />
                       <Gradient />
-                      </Link>
+                    </Link>
                   </Card>
                 </SplideSlide>
               )

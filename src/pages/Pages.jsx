@@ -1,9 +1,11 @@
-import React from 'react';
+//components
 import Home from './Home';
 import Cuisine from './Cuisine';
 import Recipe from './Recipe';
 import SearchResult from './SearchResult';
+//react
 import { Routes, Route, useLocation } from 'react-router-dom';
+//animation
 import { AnimatePresence } from 'framer-motion';
 
 function Pages() {

@@ -9,6 +9,5 @@ export const Card = styled.div`
     img{
         width:100%;
         border-radius: 2rem;
-
     }
 `

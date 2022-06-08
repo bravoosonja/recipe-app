@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+//styling components
 import { Grid, Card } from '../styles/PagesStyles';
 
 

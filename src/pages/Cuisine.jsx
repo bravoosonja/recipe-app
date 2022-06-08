@@ -1,9 +1,9 @@
+//react
+import { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom'
+//styling components
 import { Grid, Card } from '../styles/PagesStyles';
 import { motion } from 'framer-motion';
-import { Link, useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react';
-
-
 
 function Cuisine() {
     const [cuisine, setCuisine] = useState([]);
@@ -40,7 +40,5 @@ function Cuisine() {
         </Grid>
     )
 }
-
-
 
 export default Cuisine
