@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Grid = styled(motion.div)`
     display: grid;
@@ -7,7 +8,8 @@ export const Grid = styled(motion.div)`
 `
 export const Card = styled.div`
     img{
-        width:100%;
+        width:320px;
+        height:auto;
         border-radius: 2rem;
     }
 `

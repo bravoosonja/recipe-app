@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 //styling components
 import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
+import { yellow } from '../styles/GlobalStyles';
 
 
 const Search = () => {
@@ -34,7 +35,7 @@ const FormStyle = styled.form`
 
 input {
     border:none;
-    background:linear-gradient(220.55deg, #FFF6EB 0%, #DFD1C5 100%);
+    background: ${yellow};
     font-size: 1.5rem;
     padding: 1rem 3rem;
     border: none;

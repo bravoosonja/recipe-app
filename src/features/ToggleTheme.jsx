@@ -6,10 +6,10 @@ import { func, string } from 'prop-types';
 const ToggleTheme = ({ theme, ToggleTheme }) => {
     const isLight = theme === "light";
     return (
-        <button onClick={ToggleTheme}>
+        <ToggleContainer onClick={ToggleTheme}>
             <CgSun />
             <CgMoon />
-        </button>
+        </ToggleContainer>
     )
 }
 
@@ -18,7 +18,7 @@ ToggleTheme.propTypes = {
     toggleTheme: func.isRequired,
 }
 
-const ToggleContainer = styled.button`
+export const ToggleContainer = styled.button`
 cursor: pointer;
 display: flex;
 font-size: 0.5rem;
@@ -26,6 +26,7 @@ margin: 0 auto;
 overflow: hidden;
 padding: 0.5rem;
 position: relative;
+background: transparent;
 color: ${({ theme }) => theme.textColor};
 //  sun icon
 &:first-child {

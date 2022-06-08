@@ -12,8 +12,8 @@ export const Card = styled.div`
         border-radius:2rem;
         position: absolute;
         left:0;
-        width: 100%;
-        height: 100%;
+        width: 300px;
+        height: auto;
         object-fit: cover;    
         }
         p{
@@ -39,22 +39,4 @@ export const Gradient = styled.div`
     width:100%;
     height:100%;
     background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)) ;
-`
-
-export const Logo = styled(Link)`
-text-decoration: none;
-font-size: 4rem;
-font-weight: 700;
-font-family: 'Montserrat', sans-serif;
-color: ${({ theme }) => theme.primaryColor};
-`;
-
-export const Nav = styled.div`
-padding: 4rem 0rem;
-display: flex;
-justify-content: flext-start;
-align-items: center;
-svg {
-    font-size: 2rem;
-}
 `
