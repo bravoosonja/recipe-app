@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 //styling components
 import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
-import { yellow } from '../styles/GlobalStyles';
 
 
 const Search = () => {
@@ -32,10 +31,11 @@ const FormStyle = styled.form`
     width:100%;
     position: relative;
     padding: 1rem;
+    color:${({ theme }) => theme.primaryGreen};
 
 input {
     border:none;
-    background: ${yellow};
+    background: ${({ theme }) => theme.subGreen};
     font-size: 1.5rem;
     padding: 1rem 3rem;
     border: none;
@@ -43,11 +43,13 @@ input {
     outline: none;
     width:100%;
 }
+//search icon
 svg{
     position:absolute;
     top:50%;
     left: 1%;
     transform: translate(100%, -50%);
+    color: ${({ theme }) => theme.subGreen};
 }
 `
 

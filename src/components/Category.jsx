@@ -2,10 +2,9 @@
 import { NavLink } from 'react-router-dom';
 //styling components
 import styled from 'styled-components';
-import { primaryColor, secondaryColor } from '../styles/GlobalStyles';
 import { FaPizzaSlice, FaHamburger } from 'react-icons/fa';
 import { GiChopsticks, GiNoodles } from 'react-icons/gi';
-import { yellow, blue } from '../styles/GlobalStyles';
+
 
 const Category = () => {
   return (
@@ -61,16 +60,16 @@ const SLink = styled(NavLink)`
   transform: scale(0.8);
   h4 {
     font-size:1.5rem;
-    color: ${yellow};
+    color:${({ theme }) => theme.subYellow};
     &.active{
-    color: ${blue};
+
   }
   }
   svg {
     font-size: 3rem;
-    color: ${yellow};
+    color:${({ theme }) => theme.primaryYellow};
     &.active{
-    color: ${blue};
+
   }
   }
 

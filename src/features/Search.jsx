@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 //styling components
 import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
-import { blue } from '../styles/GlobalStyles';
+import { blue, sub_green } from '../styles/GlobalStyles';
 
 const Search = () => {
     const [input, setInput] = useState("");
@@ -35,9 +35,9 @@ padding: 1rem;
 
 input {
     border:none;
-    background: ${blue};
+    background: ${({ theme }) => theme.primaryGreen};
     font-size: 1rem;
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.subGreen};
     padding: 1rem 3rem;
     border: none;
     border-radius:1rem;
@@ -52,7 +52,7 @@ svg{
     left: 17%;
     font-size: 16px;
     transform: translate(100%, -50%);
-    color:${({ theme }) => theme.textColor};
+    color:${({ theme }) => theme.subGreen};
     z-index:1;
 }
 `

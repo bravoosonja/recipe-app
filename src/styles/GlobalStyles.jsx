@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -42,16 +42,22 @@ a{
 `;
 
 export const lightTheme = {
-  background: "#C8DDD3",
-  textColor: "#6FA567",
+  background: "#E6E9F4",
+  textColor: "#131523",
+  primaryGreen: "#58B828",
+  subGreen: "#E8F8E8",
+  primaryYellow: "#F3BA30",
+  subYellow: "#F8F8D8"
 }
 
 export const darkTheme = {
-  background: "#6FA567",
-  textColor: "#C8DDD3",
+  background: "#131523",
+  textColor: "#E6E9F4",
+  primaryGreen: "#E8F8E8",
+  subGreen: "#58B828",
+  primaryYellow: "#F8F8D8",
+  subYellow: "#F3BA30",
 };
 
-export const blue = "#DBE9F2";
-export const yellow = "#FEEEB8";
 
 export default GlobalStyle;
