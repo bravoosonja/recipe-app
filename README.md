@@ -17,6 +17,7 @@ The objective of this app is to display recipes by making an external API reques
 # Lessons learned
 - The use of `.env` to hide the API key from Github
 - Defining global styles on styled components
+- The use of `dangerouslySetInnerHTML` to render html
 
 # Acknowledgement
 [Recipe API](https://spoonacular.com/food-api)

@@ -23,10 +23,6 @@ body{
     color: var(--font-color)
 }
 
-ul, li, ol{
-    list-style: none;
-}
-
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;

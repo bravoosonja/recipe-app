@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Grid, Card } from '../styles/PagesStyles';
 
+
 function SearchResult() {
-   
+
     const [searchedRecipes, setSearchedRecipes] = useState([]);
     let params = useParams();
 
@@ -18,16 +19,19 @@ function SearchResult() {
         getSearched(params.search);
     }, []);
 
-  return (
-      <Grid>
-          {searchedRecipes.map((item => {
-              return (
-                  <Card key={item.id}>
-                      <img src={item.image} alt="{item.title}" />
-                      <h4>{item.title}</h4>
-                  </Card>
-              )}))}</Grid>
-  )
+    return (
+        <Grid>
+            {searchedRecipes.map((item => {
+                return (
+                    <Card key={item.id}>
+                        <Link to={"/recipe/" + item.id}>
+                            <img src={item.image} alt="{item.title}" />
+                            <h4>{item.title}</h4>
+                        </Link>
+                    </Card>
+                )
+            }))}</Grid>
+    )
 }
 
 export default SearchResult
