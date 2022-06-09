@@ -21,18 +21,18 @@ function App() {
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
-    <ThemeProvider theme={themeMode}>
-      <GlobalStyles />
-      <Router>
+    <Router>
+      <ThemeProvider theme={themeMode}>
+        <GlobalStyles />
         <Nav>
           <Logo to={"/"}>NOM NOM NOM</Logo>
           <Search />
-          <ToggleTheme theme={theme} toggleTheme={ToggleTheme} />
+          <ToggleTheme theme={theme} toggleTheme={setTheme} />
         </Nav>
         <Category />
         <Pages />
-      </Router>
-    </ThemeProvider>
+      </ThemeProvider>
+    </Router>
   );
 }
 

@@ -36,7 +36,7 @@ const FormStyle = styled.form`
 input {
     border:none;
     background: ${({ theme }) => theme.subGreen};
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1rem 3rem;
     border: none;
     border-radius:1rem;
@@ -47,7 +47,7 @@ input {
 svg{
     position:absolute;
     top:50%;
-    left: 1%;
+    left: 12px;
     transform: translate(100%, -50%);
     color: ${({ theme }) => theme.subGreen};
 }

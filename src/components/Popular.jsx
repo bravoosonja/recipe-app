@@ -29,31 +29,31 @@ function Popular() {
     };
 
     return (
-      <div>
-        <Wrapper>
-          <h2>Popular Recipes 🔥</h2>
-          <Splide options={{
-            perPage: 4,
-            pagination: false,
-            drag: 'free',
-            gap: '4rem'
-          }}>
-            {popular.map((recipe) => {
-              return (
-                <SplideSlide key={recipe.id}>
-                  <Card>
-                    <Link to={"/recipe/" + recipe.id}>
-                      <p>{recipe.title}</p>
-                      <img src={recipe.image} alt="{recipe.title}" />
-                      <Gradient />
-                    </Link>
-                  </Card>
-                </SplideSlide>
-              )
-            })}
-          </Splide>
-        </Wrapper>
-      </div>
+
+      <Wrapper>
+        <h2>Popular Recipes 🔥</h2>
+        <Splide options={{
+          perPage: 4,
+          pagination: false,
+          drag: 'free',
+          gap: '4rem'
+        }}>
+          {popular.map((recipe) => {
+            return (
+              <SplideSlide key={recipe.id}>
+                <Card>
+                  <Link to={"/recipe/" + recipe.id}>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt="{recipe.title}" />
+                    <Gradient />
+                  </Link>
+                </Card>
+              </SplideSlide>
+            )
+          })}
+        </Splide>
+      </Wrapper>
+
     )
   };
 }

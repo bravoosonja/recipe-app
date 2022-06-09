@@ -8,30 +8,27 @@ import { GiChopsticks, GiNoodles } from 'react-icons/gi';
 
 const Category = () => {
   return (
-
-
     <List>
-      <SLink to={'/cuisine/italian'}>
+      <SLink to={'/cuisine/Italian'}>
         <FaPizzaSlice />
         <h4>Italian</h4>
       </SLink>
 
-      <SLink to={'/cuisine/american'}>
+      <SLink to={'/cuisine/American'}>
         <FaHamburger />
         <h4>American</h4>
       </SLink>
 
-      <SLink to={'/cuisine/thai'}>
+      <SLink to={'/cuisine/Thai'}>
         <GiNoodles />
         <h4>Thai</h4>
       </SLink>
 
-      <SLink to={'/cuisine/korean'}>
+      <SLink to={'/cuisine/Korean'}>
         <GiChopsticks />
         <h4>Korean</h4>
       </SLink>
     </List>
-
   )
 }
 
@@ -49,31 +46,28 @@ const SLink = styled(NavLink)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  /* margin-right: 2rem;
-  background: linear-gradient(220.55deg, #E0FF87 0.01%, #8FB85B 100%);  
+  margin-right: 2rem;
   color:${({ theme }) => theme.textColor};
-  width: 6rem;
-  height: 6rem;  */
-
   cursor: pointer;
-  transform: scale(0.8);
+  transform: scale(0.7);
+
   h4 {
     font-size:1.5rem;
     color:${({ theme }) => theme.subYellow};
+
     &.active{
-
+      color:${({ theme }) => theme.primaryYellow};
+    }
   }
-  }
-  svg {
-    font-size: 3rem;
-    color:${({ theme }) => theme.primaryYellow};
-    &.active{
-
-  }
-  }
-
   
+  svg {
+    font-size: 2rem;
+    color:${({ theme }) => theme.subYellow};
+
+    &.active{
+      color:${({ theme }) => theme.primaryYellow};
+  }
+}
 `
 
 export default Category
